@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+ {% block body_block %}
+<h2>Karthi! Please fill the Form!</h2>
+<div class="container">
+    <form  method="POST">
+        {%csrf_token %}
+      {{form.as_p}}
+
+        <input type="submit" class="btn btn-primary" value="submit">
+    </form>
+</div>
+{% endblock %}
+
+
